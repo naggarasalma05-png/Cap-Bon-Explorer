@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact et FAQ - Cap Bon Explorer</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+
+<header>
+<nav class="navbar navbar-expand-lg">
+<div class="container">
+<a class="navbar-brand" href="index.html">
+<img class="logo" src="image/logo.png" width="50" height="50" alt="Logo Cap Bon Explorer">
+<span>Cap Bon Explorer</span>
+</a>
+<button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="menu">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+<li class="nav-item"><a class="nav-link" href="activites.html">Activitzs</a></li>
+<li class="nav-item"><a class="nav-link" href="agenda.html">Agenda</a></li>
+<li class="nav-item"><a class="nav-link" href="reservation.html">Reservationv</a></li>
+<li class="nav-item"><a class="nav-link" href="contact.html">Contact/FAQ</a></li>
+</ul>
+</div>
+</div>
+</nav>
+</header>
+
+<main class="container">
+<h1 class="mt-4">Contact et FAQ</h1>
+<section>
+    <h2>Nous contacter</h2>
+        <p>Adresse : Avenue Habib Bourguiba, Nabeul</p>
+        <p>Telephone : 72 000 000</p>
+        <p>E-mail : contact@capbon-explorer.com</p>
+    <h3>Horaires d'accueil</h3>
+<ul><li>Du lundi au vendredi : 09h00 - 17h00</li><li>Samedi : 09h00 - 13h00</li><li>Dimanche : ferme</li></ul>
+<p>Notre bureau se trouve a Nabeul, au Cap Bon.</p>
+</section>
+
+
+<section>
+    <h2>Questions frequentes</h2>
+    <div class="accordion" id="faq">
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#q1">Comment consulter les activites ?</button>
+        </h2>
+        <div id="q1" class="accordion-collapse collapse show" data-bs-parent="#faq">
+        <div class="accordion-body">Ouvrez la page Activites pour voir les huit offres.</div>
+    </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#q2">Comment calculer le prix ?</button>
+        </h2>
+        <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faq">
+        <div class="accordion-body">Utilisez le formulaire de reservation pour calculer le montant.</div>
+    </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#q3">La reservation est-elle reelle ?</button>
+        </h2>
+        <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faq">
+        <div class="accordion-body">Non, il s'agit uniquement d'une simulation pedagogique.</div>
+    </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#q4">Comment contacter l'equipe ?</button>
+        </h2>
+        <div id="q4" class="accordion-collapse collapse" data-bs-parent="#faq">
+        <div class="accordion-body">Vous pouvez utiliser le mini-formulaire ci-dessous.</div>
+    </div>
+    </div>
+    </div>
+</section>
+
+
+<section>
+    <h2>Mini-formulaire de contact</h2>
+    <form id="formContact">
+        <label class="form-label" for="nomContact">Nom</label>
+        <input class="form-control mb-2" id="nomContact" required>
+        <label class="form-label" for="emailContact">E-mail</label>
+        <input class="form-control mb-2" id="emailContact" type="email" required>
+        <label class="form-label" for="sujet">Sujet</label>
+        <input class="form-control mb-2" id="sujet" required>
+        <label class="form-label" for="msg">Message</label>
+        <textarea class="form-control mb-2" id="msg" required></textarea>
+        <button class="btn btn-success">Envoyer</button>
+    </form>
+    <p id="confirmation"></p>
+</section>
+</main>
+
+<footer>
+<p>Cap Bon Explorer - Projet pedagogique</p>
+<a href="index.html">Accueil</a>
+<a href="activites.html">Activites</a>
+<a href="reservation.html">Reservation</a>
+</footer>
+<script src="js/bootstrap.bundle.min.js"></script>
+
+<script>
+document.getElementById("formContact").addEventListener("submit", function(e) {
+    e.preventDefault();
+    document.getElementById("confirmation").textContent = "Votre message a ete enregistre a l'ecran.";
+    this.reset();
+});
+</script>
+</body></html>
